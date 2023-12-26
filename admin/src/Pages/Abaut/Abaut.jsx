@@ -16,7 +16,7 @@ function Abaut() {
     desc: '...',
   });
   useEffect(() => {
-    axios.get('http://localhost:4100/abaut')
+    axios.get('http://navoiyps.uz/abaut')
       .then((response) => {
         if (response.data.length > 0) {
           const initialData = response.data[0]; // Avvalgi ma'lumotlardan birini tanlab olish
@@ -37,7 +37,7 @@ function Abaut() {
     if ( formData.title !== '...' || formData.desc !== '...') {
       try {
         const response = await axios.put(
-          'http://localhost:4100/abaut/update/658adc8865e4331de7f6a824',
+          'http://navoiyps.uz/abaut/update/658adc8865e4331de7f6a824',
           formData
         );
 
@@ -78,7 +78,7 @@ function Abaut() {
       formData.append('file', selectedFile);
 
       // Make a POST request to upload the image
-      await axios.post('http://localhost:4100/upload', formData, {
+      await axios.post('http://navoiyps.uz/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

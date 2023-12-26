@@ -242,7 +242,7 @@
                     <div class="copy_text">
                         <span>
                             © Copyright
-                            <script>var year = new Date(); document.write(year.getFullYear());</script> by localhost:4100
+                            <script>var year = new Date(); document.write(year.getFullYear());</script> by navoiyps.uz
                         </span>
                     </div>
                 </div>
@@ -288,7 +288,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Fetch data from the API
-            fetch('http://localhost:4100/news')
+            fetch('http://navoiyps.uz/news')
                 .then(response => response.json())
                 .then(data => {
                     const newsContainer = document.getElementById('blog-art');
@@ -304,9 +304,9 @@
                         listItem.style.height = '350px';
     
                         listItem.innerHTML = `
-                            <div class="blog-img" onclick="updateBigCard('${item.title}', '${item.desc}', 'http://localhost:4100/uploads/${item.img}')">
-                                <a href="#" class="small-card" data-src="http://localhost:4100/uploads/${item.img}">
-                                    <img src="http://localhost:4100/uploads/${item.img}" alt="">
+                            <div class="blog-img" onclick="updateBigCard('${item.title}', '${item.desc}', 'http://navoiyps.uz/uploads/${item.img}')">
+                                <a href="#" class="small-card" data-src="http://navoiyps.uz/uploads/${item.img}">
+                                    <img src="http://navoiyps.uz/uploads/${item.img}" alt="">
                                 </a>
                             </div>
                             <div class="blog-text">

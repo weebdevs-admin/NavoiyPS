@@ -17,7 +17,7 @@ function Main() {
 
   // API-dan ma'lumotlarni olish uchun useEffect qo'shing
   useEffect(() => {
-    axios.get('http://localhost:4100/statist')
+    axios.get('http://navoiyps.uz/statist')
       .then((response) => {
         if (response.data.length > 0) {
           const initialData = response.data[0]; // Avvalgi ma'lumotlardan birini tanlab olish
@@ -41,7 +41,7 @@ function Main() {
     if (formData.established !== '...' || formData.teachers !== '...' || formData.students !== '...') {
       try {
         const response = await axios.put(
-          'http://localhost:4100/statist/update/658add8765e4331de7f6a829',
+          'http://navoiyps.uz/statist/update/658add8765e4331de7f6a829',
           formData
         );
 

@@ -26,7 +26,7 @@ function News() {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('http://localhost:4100/news');
+      const response = await axios.get('http://navoiyps.uz/news');
       setImages(response.data);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -35,8 +35,8 @@ function News() {
 
   const handleDelete = async (newsItem) => {
     try {
-      await axios.delete(`http://localhost:4100/delete-image/${newsItem.img}`);
-      await axios.delete(`http://localhost:4100/news/delete/${newsItem._id}`);
+      await axios.delete(`http://navoiyps.uz/delete-image/${newsItem.img}`);
+      await axios.delete(`http://navoiyps.uz/news/delete/${newsItem._id}`);
       toast.success('Image deleted successfully');
       fetchImages();
     } catch (error) {
@@ -79,7 +79,7 @@ function News() {
     try {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      await axios.post('http://localhost:4100/upload', formData, {
+      await axios.post('http://navoiyps.uz/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -97,11 +97,11 @@ function News() {
       try {
         if (editingItemId) {
           // If editingItemId exists, update the existing item
-          await axios.put(`http://localhost:4100/news/update/${editingItemId}`, formData);
+          await axios.put(`http://navoiyps.uz/news/update/${editingItemId}`, formData);
           toast.success('Information updated successfully');
         } else {
           // If editingItemId doesn't exist, create a new item
-          await axios.post('http://localhost:4100/news/create', formData);
+          await axios.post('http://navoiyps.uz/news/create', formData);
           toast.success('Ma\'lumot qo\'shildi');
         }
 
@@ -154,7 +154,7 @@ function News() {
           {images &&
             images.map((newsItem) => (
               <div key={newsItem._id} className="news-card">
-                <img src={`http://localhost:4100/uploads/${newsItem.img}`} alt={newsItem.title} />
+                <img src={`http://navoiyps.uz/uploads/${newsItem.img}`} alt={newsItem.title} />
                 <div className="news-content">
                   <h3>{newsItem.title}</h3>
                 </div>
