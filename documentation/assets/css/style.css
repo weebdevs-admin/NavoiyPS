@@ -1,0 +1,187 @@
+html {
+    background-color: #EEEEEE;
+    color: #383838;
+}
+
+::-moz-selection {
+    background: #333636;
+    color: #00DFFC;
+}
+
+::selection {
+    background: #333636;
+    color: #00DFFC;
+}
+
+#documenter_sidebar #documenter_logo {
+    background-image: url(../images/image_1.png);
+}
+
+#documenter_sidebar #documenter_logo {
+    display: block;
+    height: 20%;
+    max-height: 200px;
+    min-height: 70px;
+    width: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    margin: auto;
+    background-size: contain;
+}
+
+a {
+    color: #008C9E;
+}
+
+p {
+    font-size: 17px;
+    line-height: 27px;
+}
+
+li {
+    font-size: 17px;
+    line-height: 27px;
+}
+
+.btn {
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background-image: -moz-linear-gradient(top, #008C9E, #006673);
+    background-image: -ms-linear-gradient(top, #008C9E, #006673);
+    background-image: -webkit-gradient(linear, 0 0, 0 008C9E%, from(#343838), to(#006673));
+    background-image: -webkit-linear-gradient(top, #008C9E, #006673);
+    background-image: -o-linear-gradient(top, #008C9E, #006673);
+    background-image: linear-gradient(top, #008C9E, #006673);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#008C9E', endColorstr='#006673', GradientType=0);
+    border-color: #006673 #006673 #bfbfbf;
+    color: #FFFFFF;
+}
+
+    .btn-primary:hover,
+    .btn-primary:active,
+    .btn-primary.active,
+    .btn-primary.disabled,
+    .btn-primary[disabled] {
+        border-color: #008C9E #008C9E #bfbfbf;
+        background-color: #006673;
+    }
+
+hr {
+    border-top: 1px solid #D4D4D4;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+#documenter_sidebar, #documenter_sidebar ul a {
+    background-color: #343838;
+    color: #FFFFFF;
+}
+
+    #documenter_sidebar ul a {
+        -webkit-text-shadow: 1px 1px 0px #494F4F;
+        -moz-text-shadow: 1px 1px 0px #494F4F;
+        text-shadow: 1px 1px 0px #494F4F;
+    }
+
+    #documenter_sidebar ul {
+        border-top: 1px solid #212424;
+    }
+
+        #documenter_sidebar ul a {
+            border-top: 1px solid #494F4F;
+            border-bottom: 1px solid #212424;
+            color: #FFFFFF;
+        }
+
+            #documenter_sidebar ul a:hover {
+                background: #333636;
+                color: #ffb206;
+                border-top: 1px solid #333636;
+            }
+
+            #documenter_sidebar ul a.current {
+                background: #333636;
+                color: #ffb206;
+                border-top: 1px solid #333636;
+            }
+
+#documenter_copyright {
+    display: block !important;
+    visibility: visible !important;
+}
+
+#documenter_sidebar ul a {
+    font-size: 14px !important;
+    font-weight: normal;
+}
+
+
+.table-bordered, .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid #ddd;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+table {
+    background-color: #fff !important;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table > tbody > tr > td, .table > tbody > tr > th, .table > tfoot > tr > td, .table > tfoot > tr > th, .table > thead > tr > td, .table > thead > tr > th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+
+caption, th {
+    text-align: left;
+}
+
+td, th {
+    padding: 10px !important;
+}
+table pre.prettyprint.linenums {
+    max-width: 95%;
+    max-height: 350px;
+    overflow: scroll;
+}
+ pre.prettyprint.linenums {
+    max-height: 350px;
+    overflow: scroll;
+}
+#documenter_content table td:last-child {
+    max-width: 900px !IMPORTANT;
+}
+
+#documenter_nav {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: inherit !important;
+    overflow: auto !important;
+    overflow-x: hidden !important;
+    padding-right: 10px;
+    scrollbar-color: #000000 #e0e0e0;
+    scrollbar-width: thin;
+}
+
+    #documenter_nav::-webkit-scrollbar {
+        width: 10px;
+        border-radius: 3px;
+    }
+
+    #documenter_nav::-webkit-scrollbar-thumb {
+        background: #ffb206;
+    }
+
+    #documenter_nav::-webkit-scrollbar-track {
+        background: #000000;
+    }

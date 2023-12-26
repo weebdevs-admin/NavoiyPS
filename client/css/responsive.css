@@ -1,0 +1,1815 @@
+/* Extra large devices (large desktops, 1800px and up) */
+@media (max-width: 1800px) {}
+
+@media (min-width: 1200px) {
+
+    .container,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl {}
+}
+
+/* Extra large devices (large desktops, 1800px and up) */
+@media (max-width: 1440px) {}
+
+@media (max-width: 1024px) {}
+
+@media (max-width: 992px) {
+    .lg-gallery {
+        display: none;
+    }
+
+    .md-gallery {
+        display: block;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .works img {
+        background-color: #ffb739;
+        width: 80%;
+        padding: 3px 5px 4px 5px;
+        border-radius: 6px;
+    }
+
+    .side_form {
+        background-color: white;
+        padding: 20px 20px 20px 20px;
+        position: relative;
+        left: 0;
+    }
+
+    .articles2 a {
+        display: block;
+        background-color: #48648a;
+        color: white !important;
+        padding: 4px 5px 4px 5px;
+        width: 40%;
+        position: absolute;
+        left: 13px;
+        border-radius: 6px;
+        top: 84%;
+    }
+
+    .review_form {
+        padding: 0;
+        margin: 33px 0 0 0;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 38%;
+        width: calc(var(--swiper-navigation-size)/ 44 * 27);
+        height: var(--swiper-navigation-size);
+        margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--swiper-navigation-color, var(--swiper-theme-color));
+    }
+
+    .price_tag {
+        background-color: #ffb739;
+        /* padding: 12px 0 12px 36px; */
+        color: white;
+        padding: 13px 6px 9px 11px;
+    }
+
+    .price_tag h2 {
+        font-size: 18px;
+    }
+
+    .social-icon li a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        line-height: 35px;
+        padding: 2px;
+    }
+
+    .website_access1 {
+        background-color: white;
+        position: relative;
+        display: grid;
+        text-align: center;
+        border-radius: 6px;
+        width: 120%;
+        padding: 12px 0 0 0;
+    }
+
+    .website_access a {
+        background-color: #ffb739;
+        padding: 9px 9px 12px 9px;
+        border-radius: 6px;
+        color: black;
+        text-decoration: none;
+        font-size: 8px;
+    }
+
+    .pricing_table1 span {
+        font-size: 15px;
+        background-color: red;
+        position: absolute;
+        right: 10px;
+        top: 14px;
+        padding: 4px 4px 4px 4px;
+    }
+
+    .filter12 select#cars {
+        margin: 12px 0 0 0;
+        padding: 9px 0px 11px 0px;
+    }
+
+    .filter13 select#cars {
+        margin: 10px 0 0 0;
+    }
+
+    .side_form textarea {
+        padding: 10px 9px 10px 9px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        color: #7a6d69;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .side_form input#lname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        width: 100%;
+    }
+
+    .side_form input#fname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        width: 100%;
+    }
+
+    .side_form input#name {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        margin: 12px 40px 20px 1px;
+        width: 100%;
+    }
+
+    .side_form input#mname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        margin: 12px 40px 20px 1px;
+        width: 100%;
+    }
+
+    .side_form input[type="submit"] {
+        width: 100%;
+        background-color: #466289;
+        color: white;
+        border: none;
+        padding: 10px 0 10px 0;
+        margin: 10px 0 10px 0;
+    }
+
+    .pricing_table1 i.fa.fa {
+        position: absolute;
+        left: 13px;
+    }
+
+    .pricing_table1 {
+        box-shadow: 1px 7px 5px 5px #00000026;
+        position: relative;
+
+        width: 113%;
+    }
+
+    .blog-text {
+        padding: 15px 7px 3px 7px;
+        font-size: 12px;
+    }
+
+    .articles1 a {
+        text-decoration: none;
+        color: black;
+        font-size: 14px;
+    }
+
+    .getintouch {
+        background-color: white;
+        padding: 30px 5px 55px 5px;
+        border-radius: 6px;
+    }
+
+    .icons a {
+        position: relative;
+        display: inline-flex;
+        background-color: #466289;
+        width: 100%;
+        padding: 15px 0 15px 96px;
+        color: white;
+        margin: 20px 0 0 0;
+    }
+
+    .platform {
+        padding: 0 3em;
+        /* left: -37px; */
+    }
+
+    .imgsize img {
+        width: 15%;
+        padding: 4px 0 4px 5px;
+    }
+
+    .imgsize span {
+        padding: 5px 0 1px 5px;
+        font-size: 10px;
+    }
+
+    .imgsize1 {
+        padding: 0 0 0 0px;
+        display: contents;
+    }
+
+    .imgsize1 img {
+        width: 23px;
+        padding: 5px 2px 0 7px;
+        height: 18px;
+    }
+
+    .learnmore1 {
+        padding: 0 0px 0 83px;
+        color: white;
+        font-size: 10px;
+    }
+
+    .learnmore1 h5 {
+        padding: 0 0 0 20px;
+        font-size: 10px;
+    }
+
+    .aboutedulab {
+        padding: 70px 0 58px 0;
+        position: relative;
+    }
+
+    .bestteacher {
+        text-align: center;
+        padding: 20px 0 50px 0;
+    }
+
+    .bestreasons {
+        text-align: center;
+        background-color: #0000000d;
+        padding: 20px 0 25px 0;
+    }
+
+    .content-slider {}
+
+    .headright {
+        position: relative;
+        width: 25%;
+        padding: 16px 25px 17px;
+        background-color: #ffb739;
+        right: 0;
+    }
+
+    .imgsize {
+        padding: 12px 0 0 0px;
+        display: flex;
+    }
+
+    .filter_form {
+        position: relative;
+        width: 100%;
+    }
+
+    select#cars {
+        /* padding: 13px 37px 13px 20px; */
+        border-radius: 6px;
+        padding: 12px 0px 11px 0px;
+        width: 122%;
+        font-size: 15px;
+    }
+
+    select#price {
+        /* padding: 13px 37px 13px 20px; */
+        border-radius: 6px;
+        padding: 12px 0px 11px 0px;
+        width: 122%;
+        font-size: 15px;
+    }
+
+    select#language {
+        /* padding: 13px 37px 13px 20px; */
+        border-radius: 6px;
+        padding: 12px 0px 11px 0px;
+        width: 122%;
+        font-size: 15px;
+    }
+
+    select#star {
+        /* padding: 13px 37px 13px 20px; */
+        border-radius: 6px;
+        padding: 11px 0px 11px 0px;
+        width: 122%;
+        font-size: 15px;
+        margin: 9px 0 0 0;
+    }
+
+    .about-sec-2 img {
+        position: absolute;
+        top: 164px;
+        left: 365px;
+        width: 77px;
+    }
+
+    .footer2 img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .footerpart li {
+        padding: 0 0 39px 0;
+        display: flex;
+        font-size: 13px;
+    }
+
+    .footer2 ul {
+        padding: 40px 0;
+    }
+
+    .footer2 h4 {
+        color: #ffb739;
+        padding: 0;
+    }
+
+    c span {
+        color: white !important;
+        /* padding: 0px 0 0px 37px; */
+        position: relative;
+    }
+
+    .footer2:after {
+        content: "";
+        display: block;
+        background: #ffb739;
+        width: 90px;
+        height: 2px;
+        left: 19px;
+        top: 103px;
+        position: absolute;
+    }
+
+    .footer1 img {
+        background-color: #ffb739;
+        padding: 4px 5px 3px 5px;
+        width: 8%;
+    }
+
+    .pro-teacher1 {
+        position: absolute;
+        background-color: #faf5f5;
+        top: 75%;
+        left: 8px;
+        padding: 4px 8px 1px 6px;
+        font-size: 13px;
+    }
+
+    .pro-teacher1 h4 {
+        font-size: 17px;
+    }
+
+    .pro-teacher1 span {
+        color: #000000bd;
+        border-bottom: solid #ffb739;
+        padding: 0 0 0px 0;
+    }
+
+    .blackspace:before {
+        content: "";
+        position: absolute;
+        background-color: #090935c4;
+        top: 218px;
+        left: -22px;
+        right: 2px;
+        width: 44%;
+        height: 171px;
+    }
+
+    .aboutedulab1:before {
+        content: "";
+        position: absolute;
+        background-color: #ffb739;
+        top: -21px;
+        bottom: 0px;
+        /* left: 0; */
+        right: -38px;
+        width: 43%;
+        height: 241px;
+    }
+
+    .onlinelearning1 img {
+        width: 72%;
+        padding: 100px 0 0 0;
+        float: right;
+    }
+
+    .navbar-brand img {
+        width: 100%;
+        position: relative;
+        left: -6px;
+    }
+
+    .aboutedulab img {
+        position: absolute;
+        width: 100%;
+    }
+
+    .webdesign a {
+        text-decoration: none;
+        color: black;
+        font-size: 12px;
+    }
+
+    li.movingimg1 {
+        /* padding: 19px 62px 2px 10px; */
+        background-color: #162d4edb;
+        margin: 0 0px 0 0px;
+        color: white;
+        padding: 14px 6px 2px 5px;
+        font-size: 10px;
+    }
+
+    .vl {
+        border-left: 2px solid #ffb739;
+        height: 65px;
+        position: absolute;
+        left: 26%;
+        margin-left: -3px;
+        top: 0;
+    }
+
+    .works span {
+        padding: 0px 12px;
+        display: block;
+        font-size: 12px;
+    }
+
+    .jhonharry span {
+        background-color: #ffb739;
+        position: absolute;
+        padding: 4px;
+        width: 31px;
+        line-height: 34px;
+        height: 46px;
+    }
+
+    .jhonharry span img {
+        padding: 1px;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 65px;
+        right: -60px;
+        background-color: wheat;
+        padding: 10px 8px 10px 7px;
+        width: 50%;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 166px;
+        left: 5px;
+        background-color: wheat;
+        padding: 10px 1px 11px 6px;
+        width: 49%;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    .top-left img {
+        width: 22%;
+        float: left;
+        padding: 0px 2px 0px 2px;
+        background-color: #1c3b66;
+        border-radius: 6px;
+    }
+
+    .bottom-right img {
+        width: 22%;
+        float: left;
+        padding: 5px 5px 5px 5px;
+        background-color: #1c3b66;
+        border-radius: 6px;
+    }
+
+    .courses2 a {
+        color: black;
+        text-decoration: none;
+        background-color: #ffb739;
+        /* padding: 15px 28px 15px 21px; */
+        border-radius: 6px;
+        padding: 16px 17px 16px 17px;
+        position: relative;
+        font-size: 11px;
+        right: 0;
+    }
+
+    .courses1 h2 {
+        font-size: 19px;
+    }
+
+    .joinus1 {
+        width: 100%;
+        position: relative;
+        display: grid;
+        padding: 25px 22px 0px 78px;
+        left: 0;
+        right: 0;
+    }
+
+    .joinus1 a {
+        padding: 15px 8px 15px 17px;
+        background-color: white;
+        width: 36%;
+        color: black;
+        border-radius: 6px;
+    }
+
+    .bottom-left {
+        position: absolute;
+        bottom: 58px;
+        left: -18px;
+        background-color: white;
+        border-radius: 6px;
+        font-size: 12px;
+        width: 61%;
+        box-shadow: 5px 5px 5px 5px #00000029;
+        padding: 9px 0 8px 11px;
+    }
+
+    .joinus2 img {
+        width: 23%;
+        position: absolute;
+        top: 298px;
+        left: -36px;
+    }
+
+    .work-img {
+        background-color: #ffb739;
+        padding: 3px 5px 3px 5px;
+        border-radius: 6px;
+        width: 40%;
+        /* display: inline; */
+        display: inline-table;
+    }
+
+    .works {
+        background-color: #ffb7396b;
+        /* width: 20%; */
+        text-align: center;
+        padding: 17px 0 26px 0px;
+        border-radius: 6px;
+    }
+
+    .works h4 {
+        padding: 15px 0 5px 0;
+        font-size: 16px;
+    }
+
+    .getstarted {
+        padding: 15px 15px;
+        border: solid;
+        width: 45%;
+        border-radius: 34px;
+        border-color: #ffb739;
+        margin: 28px 0 0 0;
+        text-align: center;
+    }
+
+    .midarrow {
+        position: absolute;
+        border-radius: 65%;
+        width: 40px;
+        height: 40px;
+        background-color: #374b67;
+        padding: 8px 11px 2px 11px;
+        right: 39%;
+        /* top: 100%; */
+        bottom: -21px;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 22px;
+        right: -74px;
+        background-color: white;
+        width: 60%;
+        border-radius: 6px;
+        padding: 6px 0px 6px 9px;
+        font-size: 12px;
+    }
+
+    .filter2 select#price {
+        padding: 10px 12px 12px 17px;
+    }
+
+    .filter1 {
+        padding: 9px 0 0 0;
+    }
+
+    .filter2 {
+        padding: 10px 0 0 0;
+    }
+
+    .course-dis h6 {
+        margin-left: 134px;
+    }
+
+    .about-edu {
+        padding: 0px 0px 15px 0px;
+    }
+
+    .c-imgsize img {
+        width: 20px;
+        padding: 0px 0px 4px 0px;
+    }
+
+    .event-imgsize img {
+        padding: 0px 13px 4px 0px;
+    }
+
+    .client1 {
+
+        padding: 26px 10px 15px 30px;
+
+    }
+
+    .test-home2 {
+
+        background-size: contain;
+
+    }
+
+    .course-dis {
+        margin-left: -112px;
+        margin-top: -12px;
+
+    }
+
+    .course-img-home img {
+        margin-left: 35px;
+    }
+
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media only screen and (min-width: 375px) and (max-width: 767px) {
+
+    .navbar-brand img {
+        width: 76%;
+        position: relative;
+
+        left: 0;
+    }
+
+    .aboutedulab {
+        padding: 70px 0 28px 0;
+        position: relative;
+    }
+
+    button.owl-prev {
+        background-color: #466289 !important;
+    }
+
+    button.owl-next {
+
+        background-color: #466289 !important;
+        margin: 0 0 0 11px;
+
+    }
+
+    button.owl-next img {
+        width: 50px;
+        height: 50px;
+        padding: 8px 8px 8px 8px;
+    }
+
+    button.owl-prev img {
+        width: 50px;
+        height: 50px;
+        padding: 8px 8px 8px 8px;
+    }
+
+    .tab_content {
+        font-size: 13px;
+    }
+
+    button.tablink {
+        font-size: 13px;
+    }
+
+    .pro-teacher1 span {
+        color: #000000bd;
+        border-bottom: solid #ffb739;
+        padding: 0 0 2px 0;
+    }
+
+    .footer1 input {
+        padding: 13px 0px 16px 13px;
+        width: 100%;
+        position: relative;
+        border: none;
+    }
+
+    .footer1 {
+        width: 80%;
+    }
+
+    .onlinelearning1 img {
+        width: 100%;
+        padding: 44px 0 0 0;
+        float: right;
+        position: relative;
+    }
+
+    .side_form {
+        background-color: white;
+        padding: 20px 20px 15px 20px;
+        position: relative;
+        left: 0;
+    }
+
+    .getintouch {
+        background-color: white;
+        padding: 20px 0 15px 0px;
+        margin: 20px 0 0 0;
+    }
+
+    .side_form input[type="submit"] {
+        width: 100%;
+        background-color: #466289;
+        color: white;
+        border: none;
+        padding: 10px 0 10px 0;
+        margin: 10px 0 10px 0;
+    }
+
+    .side_form textarea {
+        padding: 10px 20px 10px 9px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        color: #7a6d69;
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
+    .review_form input[type="submit"] {
+        width: 100%;
+        background-color: #466289;
+        color: white;
+        border: none;
+        padding: 10px 0 10px 0;
+        margin: 10px 0 10px 0;
+    }
+
+    .side_form input#name {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        margin: 12px 40px 20px 1px;
+        width: 100%;
+    }
+
+    .side_form input#lname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        width: 100%;
+    }
+
+    .side_form input#mname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        margin: 12px 40px 20px 1px;
+        width: 100%;
+    }
+
+    .side_form input#fname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        width: 100%;
+    }
+
+    .review_form textarea {
+        padding: 10px 20px 10px 9px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        color: #7a6d69;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+
+    .review_form {
+        padding: 0;
+        margin: 33px 0 0 0;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    .lesson {
+        display: flex;
+        padding: 25px 0px 0 1px;
+        margin: 0 0px 19px 0px;
+    }
+
+    .website_access a {
+        background-color: #ffb739;
+        padding: 9px 9px 12px 9px;
+        border-radius: 6px;
+        color: black;
+        text-decoration: none;
+        font-size: 8px;
+    }
+
+    .navbar-brand {
+        display: inline-block;
+        padding-top: 0.3125rem;
+        padding-bottom: 0.3125rem;
+        margin-right: 0;
+        font-size: 1.25rem;
+        line-height: inherit;
+        white-space: nowrap;
+    }
+
+    .navbar-brand img {
+        width: 69%;
+        position: relative;
+        left: 20px;
+    }
+
+    .platform h2 {
+        color: white;
+        font-size: 30px;
+    }
+
+    .top-left img {
+        width: 22%;
+        float: left;
+        padding: 0px 2px 0px 2px;
+        background-color: #1c3b66;
+        border-radius: 6px;
+    }
+
+    .bottom-right img {
+        width: 22%;
+        float: left;
+        padding: 5px 5px 5px 5px;
+        background-color: #1c3b66;
+        border-radius: 6px;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 164px;
+        left: 7px;
+        background-color: wheat;
+        padding: 10px 0px 11px 7px;
+        width: 44%;
+        border-radius: 6px;
+        font-size: 11px;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 7px;
+        right: 16px;
+        background-color: wheat;
+        padding: 10px 8px 10px 7px;
+        width: 42%;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    .courses {
+        width: 100%;
+        float: left;
+        padding: 38px 0 42px 0;
+        background-color: #f0f0f0;
+    }
+
+    .courses2 a {
+        color: black;
+        text-decoration: none;
+        background-color: #ffb739;
+        /* padding: 15px 28px 15px 21px; */
+        border-radius: 6px;
+        padding: 16px 17px 16px 17px;
+        position: relative;
+        font-size: 20px;
+        right: 0;
+    }
+
+    .courses2 img {
+        width: 15%;
+        /* padding: 9px 0px 22px 12px; */
+        /* writing-mode: vertical-lr; */
+        transform: rotate(321deg);
+        padding: 14px 0px 11px 13px;
+    }
+
+    .jhonharry li.movingimg {
+        width: 20%;
+
+        padding: 9px 0px 10px 9px;
+        background-color: #162d4edb;
+    }
+
+    li.movingimg1 {
+        padding: 22px 4px 6px 4px;
+        background-color: #354965;
+        color: white;
+        font-size: 19px;
+        width: 55%;
+    }
+
+    .jhonharry span {
+        background-color: #ffb739;
+        position: absolute;
+        width: 23%;
+        padding: 12px 22px 6px 22px;
+    }
+
+    .imgsize1 {
+        padding: 2px 60px 0 92px;
+    }
+
+    .imgsize img {
+        width: 10%;
+        padding: 0px 4px 5px 3px;
+    }
+
+    .imgsize1 img {
+        width: 26px;
+    }
+
+    .getstarted {
+        padding: 15px 0px 15px 24px;
+        border: solid;
+        width: 50%;
+        border-radius: 34px;
+        border-color: #ffb739;
+        margin: 28px 0 6px 0;
+    }
+
+    .platform {
+        padding: 0 1.4em;
+        /* left: -37px; */
+
+    }
+
+    .po-ab-se {
+        position: relative;
+        z-index: 9;
+    }
+
+    .swiper-slide:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+        height: 300px;
+    }
+
+    .content-slider {
+        z-index: 1;
+        left: 0;
+    }
+
+    .headright {
+        position: relative;
+        width: 67%;
+        padding: 16px 25px 17px;
+        background-color: #ffb739;
+        right: 0;
+    }
+
+    .filter img {
+        width: 25%;
+        /* padding: 0px 3px 0 4px; */
+    }
+
+    .bestschool img {
+        width: 86%;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 38px;
+        right: 2px;
+        background-color: white;
+        width: 50%;
+        border-radius: 6px;
+        padding: 6px 0px 6px 9px;
+        font-size: 12px;
+    }
+
+    .bottom-left {
+        position: absolute;
+        bottom: 36px;
+        left: 6px;
+        background-color: white;
+        border-radius: 6px;
+        font-size: 12px;
+        width: 50%;
+        box-shadow: 5px 5px 5px 5px #00000029;
+        padding: 9px 0 8px 11px;
+    }
+
+    .joinus1 {
+        width: 100%;
+        position: relative;
+        display: grid;
+        padding: 33px 0 0px 141px;
+        left: 0;
+        right: 0;
+    }
+
+    .howitworks {
+        padding: 27px 0px 30px 0px;
+    }
+
+    .joinus1 a {
+        padding: 15px 8px 15px 27px;
+        background-color: white;
+        width: 65%;
+        color: black;
+        border-radius: 6px;
+    }
+
+    .testimonial {
+        padding: 40px 0 0px 0;
+    }
+
+    .footer2 span {
+        color: #bfb6b6 !important;
+        padding: 0px 4px 0px 55px;
+        position: absolute;
+    }
+
+    .copy {
+
+        padding: 0px 20px;
+    }
+
+    .midarrow {
+        position: absolute;
+        border-radius: 65%;
+        width: 47px;
+        height: 47px;
+        background-color: #374b67;
+        padding: 10px 10px 10px 10px;
+        right: 44%;
+        /* top: 100%; */
+        bottom: 18px;
+        z-index: 1;
+    }
+
+    .work-img {
+        background-color: #ffb739;
+        padding: 3px 5px 3px 5px;
+        border-radius: 6px;
+        width: 32%;
+        /* display: inline; */
+        display: inline-table;
+    }
+
+    .works img {
+        /* background-color: #ffb739; */
+        width: 66%;
+        /* padding: 5px 7px 5px 7px; */
+        /* border-radius: 6px; */
+    }
+
+    .works {
+        background-color: #ffb7396b;
+        /* width: 20%; */
+        text-align: center;
+        padding: 24px 37px 45px 37px;
+        border-radius: 6px;
+        margin: 0px 0 37px 0;
+    }
+
+    .aboutedulab1:before {
+        content: "";
+        position: absolute;
+        background-color: #ffb739;
+        top: -21px;
+        bottom: 0px;
+        /* left: 0; */
+        right: 0;
+        width: 43%;
+        height: 241px;
+    }
+
+    .aboutedulab2 {
+        position: relative;
+        padding: 400px 0 0px 8px;
+    }
+
+    .pro-teacher1 {
+        position: absolute;
+        background-color: #faf5f5;
+        top: 77%;
+        left: 64px;
+        padding: 4px 42px 3px 32px;
+        font-size: 13px;
+    }
+
+    .footer1 img {
+        background-color: #ffb739;
+        padding: 0px;
+        height: 35px;
+    }
+
+    .aboutedulab img {
+        position: absolute;
+        width: 90%;
+    }
+
+    .blackspace:before {
+        content: "";
+        position: absolute;
+        background-color: #090935c4;
+        top: 249px;
+        left: -11px;
+        right: 2px;
+        width: 42%;
+        height: 127px;
+    }
+
+    .about-sec-2 img {
+        position: absolute;
+        top: 164px;
+        left: 161px;
+        width: 77px;
+    }
+
+    .filter1 {
+        padding: 0 0 5px 0;
+    }
+
+    .movingimg img {
+        width: 85%;
+        padding: 3px 0 4px 0;
+        border-radius: 58%;
+    }
+
+    .imgsize {
+        padding: 12px 0 0 0px;
+        display: flex;
+    }
+
+    .imgsize1 img {
+        width: 26%;
+        padding: 0px 2px 0 4px;
+    }
+
+    .filter2 select#price {
+        padding: 12px 80px 12px 17px;
+        width: 100%;
+    }
+
+    .filter12 select#star {
+        padding: 13px 37px 13px 15px;
+        margin: 7px 0 0 0;
+        width: 100%;
+    }
+
+    .filter13 select#cars {
+        padding: 13px 37px 13px 14px;
+        margin: 0 0 6px 0;
+        width: 100%;
+    }
+
+    .filter1 select#cars {
+        padding: 13px 37px 13px 20px;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    select#language {
+        padding: 13px 37px 13px 20px;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    .filter_form {
+        position: relative;
+        width: 56%;
+        padding: 0 0 10px 0;
+    }
+
+    .data_eng {
+        padding-bottom: 90px;
+        font-size: 12px;
+        padding: 50px 10px 90px 12px;
+    }
+
+
+
+    .cd {
+        margin-bottom: 25px;
+    }
+
+    .c-imgsize img {
+        width: 17%;
+    }
+
+    .c-imgsize1 img {
+
+        padding: 0 2px 3px 0px;
+    }
+
+    .event-img {
+        margin-top: 20px;
+    }
+
+    .co-d {
+        margin-bottom: -60px;
+    }
+
+
+    .wk {
+        margin-bottom: 20px;
+    }
+
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 374px) {
+
+
+    .navbar-light .navbar-toggler {
+        color: rgba(0, 0, 0, .5);
+        border-color: rgba(0, 0, 0, .1);
+        margin: 0;
+        padding: 0;
+    }
+
+    .filter2 select#price {
+        padding: 12px 80px 12px 17px;
+        width: 100%;
+    }
+
+    .filter12 select#star {
+        padding: 13px 37px 13px 15px;
+        margin: 7px 0 0 0;
+        width: 100%;
+    }
+
+    .filter13 select#cars {
+        padding: 13px 37px 13px 14px;
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+
+    .filter1 select#language {
+        padding: 13px 37px 13px 20px;
+        border-radius: 6px;
+        width: 100%;
+    }
+
+    button.owl-prev {
+        background-color: #466289 !important;
+    }
+
+    button.owl-next {
+
+        background-color: #466289 !important;
+        margin: 0 0 0 11px;
+
+    }
+
+    button.owl-next img {
+        width: 50px;
+        height: 50px;
+    }
+
+    button.owl-prev img {
+        width: 54px;
+        height: 54px;
+    }
+
+    .tablink {
+        font-size: 13px;
+    }
+
+    .side_form textarea {
+        padding: 10px 26px 10px 9px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        color: #7a6d69;
+        width: 100%;
+        margin: 15px 0 0 0;
+    }
+
+    .side_form input#name {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        margin: 12px 40px 20px 1px;
+        width: 100%;
+    }
+
+    .side_form input#lname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        width: 100%;
+    }
+
+    .side_form input#mname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        margin: 12px 40px 20px 1px;
+        width: 100%;
+    }
+
+    .side_form input#fname {
+        padding: 10px 100px 10px 7px;
+        border-radius: 6px;
+        border: none;
+        background-color: #00000012;
+        width: 100%;
+    }
+
+    .side_form {
+        background-color: white;
+        padding: 20px 20px 20px 20px;
+        position: relative;
+        left: 0;
+    }
+
+    .side_form input[type="submit"] {
+        width: 100%;
+        background-color: #466289;
+        color: white;
+        border: none;
+        padding: 10px 0 10px 0;
+        margin: 10px 0 10px 0;
+    }
+
+    .tabbing {
+        padding: 60px 0 0 0;
+        position: relative;
+        font-size: 13px;
+    }
+
+    .platform {
+        padding: 0 3em;
+        /* left: -37px; */
+    }
+
+    .platform h5 {
+        color: #ffb739;
+        font-size: 15px;
+    }
+
+    .platform h2 {
+        color: white;
+        font-size: 26px;
+    }
+
+    .platform span {
+        color: white;
+        font-size: 15px;
+    }
+
+    .data_eng {
+        padding-bottom: 90px;
+        font-size: 12px;
+        padding: 50px 10px 90px 12px;
+    }
+
+    .filter2 select#cars {
+        padding: 12px 78px 13px 17px;
+    }
+
+    .filter12 select#cars {
+        padding: 13px 30px 13px 20px;
+        margin: 10px 0 0 0;
+    }
+
+    .pro-teacher1 span {
+        color: #000000bd;
+        border-bottom: solid #ffb739;
+        padding: 0 0 7px 0;
+    }
+
+    .onlinelearning1 img {
+        width: 100%;
+        padding: 44px 0 0 0;
+        float: right;
+    }
+
+    .website_access a {
+        background-color: #ffb739;
+        padding: 9px 9px 12px 9px;
+        border-radius: 6px;
+        color: black;
+        text-decoration: none;
+        font-size: 8px;
+    }
+
+    .lesson {
+        display: flex;
+        padding: 25px 0px 0 1px;
+        margin: 0 0px 20px 0px;
+    }
+
+    .pricing_table1 span {
+        font-size: 15px;
+        background-color: red;
+        position: absolute;
+        right: 34px;
+        top: 26px;
+        padding: 4px 4px 4px 4px;
+    }
+
+    .top-left {
+        position: absolute;
+        top: 164px;
+        left: 5px;
+        background-color: wheat;
+        padding: 10px 7px 11px 5px;
+        width: 51%;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    .imgsize1 {
+        padding: 4px 0 0 89px;
+    }
+
+    .works {
+        background-color: #ffb7396b;
+        /* width: 20%; */
+        text-align: center;
+        padding: 24px 37px 45px 37px;
+        border-radius: 6px;
+        margin: 0 0 35px 0;
+    }
+
+    .imgsize img {
+        width: 10%;
+        padding: 1px 0 3px 5px;
+    }
+
+    .filter select#lang {
+        position: absolute;
+        left: 16px;
+    }
+
+    .midarrow {
+        position: absolute;
+        border-radius: 65%;
+        width: 47px;
+        height: 47px;
+        background-color: #374b67;
+        padding: 10px 10px 10px 10px;
+        right: 43%;
+        /* top: 100%; */
+        bottom: 18px;
+    }
+
+    .filter3 {
+        padding: 58px 0 0 0;
+    }
+
+    .filter select#Price {
+        position: initial;
+        left: 15px;
+        padding: 13px 100px 13px 33px;
+    }
+
+    .filter select#rating {
+        position: inherit;
+        left: 16px;
+    }
+
+    .filter4 {
+        padding: 5px 0 0 0;
+    }
+
+    .filter2 {
+        padding: 5px 0 0 0;
+    }
+
+    .jhonharry li.movingimg {
+        width: 20%;
+        padding: 1px 1px 1px 6px;
+        background-color: #162d4edb;
+    }
+
+    .navbar-brand img {
+        width: 79%;
+        position: relative;
+        left: -12px;
+    }
+
+    .headright {
+        position: relative;
+        width: 76%;
+        padding: 16px 25px 17px;
+        background-color: #ffb739;
+        right: 0;
+    }
+
+    .content-slider {}
+
+    .courses2 a {
+        color: black;
+        text-decoration: none;
+        background-color: #ffb739;
+        /* padding: 15px 28px 15px 21px; */
+        border-radius: 6px;
+        padding: 16px 17px 16px 17px;
+        position: relative;
+        font-size: 20px;
+        right: 0;
+    }
+
+    .review_form {
+        padding: 0;
+        margin: 33px 0 0 0;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    .courses2 img {
+        width: 14%;
+        /* padding: 9px 0px 22px 12px; */
+        /* writing-mode: vertical-lr; */
+        transform: rotate(326deg);
+        padding: 14px 0px 11px 13px;
+    }
+
+    .footer1 img {
+        background-color: #ffb739;
+        padding: 5px 6px 3px 5px;
+        width: 16%;
+    }
+
+    .bottom-right {
+        position: absolute;
+        bottom: 2px;
+        right: 13px;
+        background-color: wheat;
+        padding: 10px 8px 10px 7px;
+        width: 44%;
+        border-radius: 6px;
+        font-size: 10px;
+    }
+
+    .top-right {
+        position: absolute;
+        top: 38px;
+        right: 6px;
+        background-color: white;
+        width: 50%;
+        border-radius: 6px;
+        padding: 6px 0px 6px 9px;
+        font-size: 12px;
+    }
+
+    .bottom-left {
+
+        left: 12px;
+    }
+
+    .joinus1 a {
+        padding: 15px 8px 15px 27px;
+        background-color: white;
+        width: 83%;
+        color: black;
+        border-radius: 6px;
+        display: flex;
+    }
+
+    .joinus2 img {
+        width: 23%;
+        position: absolute;
+        /* top: 315px; */
+        /* left: -76px; */
+    }
+
+    .joinus1 {
+        width: 100%;
+        position: relative;
+        display: grid;
+        padding: 60px 0 0px 103px;
+        left: 0;
+        right: 0;
+    }
+
+    .getintouch {
+        background-color: white;
+        padding: 20px 0 15px 0px;
+        margin: 20px 0 0 0;
+    }
+
+    .about-sec-2 img {
+        position: absolute;
+        top: 164px;
+        left: 111px;
+        width: 77px;
+    }
+
+    .aboutedulab2 {
+        position: relative;
+        padding: 355px 0 0 24px;
+    }
+
+    .pro-teacher1 {
+        position: absolute;
+        background-color: #faf5f5;
+        top: 75%;
+        left: 50px;
+        padding: 9px 25px 9px 25px;
+        font-size: 13px;
+    }
+
+    .blackspace:before {
+        content: "";
+        position: absolute;
+        background-color: #090935c4;
+        top: 200px;
+        left: -22px;
+        right: 2px;
+        width: 44%;
+        height: 145px;
+    }
+
+    .aboutedulab1:before {
+        content: "";
+        position: absolute;
+        background-color: #ffb739;
+        top: -21px;
+        bottom: 0px;
+        /* left: 0; */
+        right: 0;
+        width: 43%;
+        height: 196px;
+    }
+
+    .aboutedulab img {
+        position: absolute;
+        width: 90%;
+    }
+
+    .filter_form {
+        position: relative;
+        width: 56%;
+    }
+
+    .filter1 {
+        padding: 0 0 6px 0;
+    }
+
+    .footerpart li {
+        padding: 0 0 39px 0;
+        display: flex;
+        font-size: 12px;
+    }
+
+    li.movingimg1 {
+        /* padding: 19px 62px 2px 10px; */
+        background-color: #162d4edb;
+        color: white;
+        padding: 20px 96px 2px 16px;
+        font-size: 17px;
+    }
+
+    .top-left img {
+        width: 22%;
+        float: left;
+        padding: 0px 2px 0px 2px;
+        background-color: #1c3b66;
+        border-radius: 6px;
+    }
+
+    .bottom-right img {
+        width: 22%;
+        float: left;
+        padding: 5px 5px 5px 5px;
+        background-color: #1c3b66;
+        border-radius: 6px;
+    }
+
+    .jhonharry span {
+        background-color: #ffb739;
+        position: absolute;
+        padding: 10px 14px 0px 16px;
+        width: 70px;
+    }
+
+    .imgsize {
+        padding: 12px 0 0 0px;
+        display: flex;
+    }
+
+    .getstarted {
+        padding: 15px 0px 15px 25px;
+        border: solid;
+        width: 50%;
+        border-radius: 34px;
+        border-color: #ffb739;
+        margin: 28px 0 0 0;
+    }
+
+    .vl {
+        border-left: 2px solid #ffb739;
+        height: 65px;
+        position: absolute;
+        left: 21%;
+        margin-left: -3px;
+        top: 0;
+    }
+
+    .works img {
+
+        width: 80%;
+
+    }
+
+    .work-img {
+        background-color: #ffb739;
+        padding: 3px 5px 3px 5px;
+        border-radius: 6px;
+        width: 35%;
+        /* display: inline; */
+        display: inline-table;
+    }
+
+    .works span {
+        padding: 0px 10px 0 12px;
+        display: block;
+    }
+
+    .browse-course {
+        margin-left: 40px;
+    }
+
+    .cd {
+        margin-bottom: 30px;
+    }
+
+    .c-imgsize1 {
+        padding: 0px 0 0 0px;
+    }
+
+    .c-design {
+        margin-left: 10px;
+        margin-right: 30px;
+    }
+
+    .wk {
+        margin-bottom: 40px;
+    }
+}

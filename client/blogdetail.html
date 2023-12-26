@@ -1,0 +1,40 @@
+<!-- blogdetail.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ... (your head content) ... -->
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>News Detail Page</h1>
+        <div id="detailContent">
+            <!-- Content will be dynamically added here -->
+        </div>
+    </div>
+
+    <script>
+        var selectedNews = JSON.parse(sessionStorage.getItem("selectedNews"));
+
+        if (selectedNews && selectedNews.title && selectedNews.date && selectedNews.views && selectedNews.content) {
+            // Update the content of the detail page
+            var detailContent = document.getElementById("detailContent");
+            detailContent.innerHTML = `
+        <img src="${selectedNews.img}" alt="">
+        <h2>${selectedNews.title}</h2>
+        <p>${selectedNews.date} ${selectedNews.views} views</p>
+        <p>${selectedNews.content}</p>
+    `;
+        } else {
+            console.error("Error: Invalid or missing selectedNews data.");
+        }
+
+    </script>
+
+    <!-- ... (your existing script tags) ... -->
+
+</body>
+
+</html>
