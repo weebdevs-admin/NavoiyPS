@@ -288,7 +288,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Fetch data from the API
-            fetch('http://85.209.2.107:4100/news')
+            fetch('https://navoiyps.uz//news')
                 .then(response => response.json())
                 .then(data => {
                     const newsContainer = document.getElementById('blog-art');
@@ -304,9 +304,9 @@
                         listItem.style.height = '350px';
     
                         listItem.innerHTML = `
-                            <div class="blog-img" onclick="updateBigCard('${item.title}', '${item.desc}', 'http://85.209.2.107:4100/uploads/${item.img}')">
-                                <a href="#" class="small-card" data-src="http://85.209.2.107:4100/uploads/${item.img}">
-                                    <img src="http://85.209.2.107:4100/uploads/${item.img}" alt="">
+                            <div class="blog-img" onclick="updateBigCard('${item.title}', '${item.desc}', 'https://navoiyps.uz//uploads/${item.img}')">
+                                <a href="#" class="small-card" data-src="https://navoiyps.uz//uploads/${item.img}">
+                                    <img src="https://navoiyps.uz//uploads/${item.img}" alt="">
                                 </a>
                             </div>
                             <div class="blog-text">
