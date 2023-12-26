@@ -24,7 +24,7 @@ function Team() {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('http://85.209.2.107:4100/team');
+      const response = await axios.get('https://navoiyps.uz/team');
       setImages(response.data);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -33,8 +33,8 @@ function Team() {
 
   const handleDelete = async (teamItem) => {
     try {
-      await axios.delete(`http://85.209.2.107:4100/delete-image/${teamItem.img}`);
-      await axios.delete(`http://85.209.2.107:4100/team/delete/${teamItem._id}`);
+      await axios.delete(`https://navoiyps.uz/delete-image/${teamItem.img}`);
+      await axios.delete(`https://navoiyps.uz/team/delete/${teamItem._id}`);
       toast.success('Image deleted successfully');
       fetchImages();
     } catch (error) {
@@ -76,7 +76,7 @@ function Team() {
     try {
       const formData = new FormData();
       formData.append('file', selectedFile);
-      await axios.post('http://85.209.2.107:4100/upload', formData, {
+      await axios.post('https://navoiyps.uz/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -93,10 +93,10 @@ function Team() {
     if (formData.type.trim() !== '' && selectedFile) {
       try {
         if (editingItemId) {
-          await axios.put(`http://85.209.2.107:4100/team/update/${editingItemId}`, formData);
+          await axios.put(`https://navoiyps.uz/team/update/${editingItemId}`, formData);
           toast.success('Information updated successfully');
         } else {
-          await axios.post('http://85.209.2.107:4100/team/create', formData);
+          await axios.post('https://navoiyps.uz/team/create', formData);
           toast.success('Information added successfully');
         }
 
@@ -145,7 +145,7 @@ function Team() {
           {images &&
             images.map((teamItem) => (
               <div key={teamItem._id} className="team-card">
-                <img src={`http://85.209.2.107:4100/uploads/${teamItem.img}`} alt={teamItem.type} />
+                <img src={`https://navoiyps.uz/uploads/${teamItem.img}`} alt={teamItem.type} />
                 <div className="team-content">
                   <h3>{teamItem.type}</h3>
                 </div>

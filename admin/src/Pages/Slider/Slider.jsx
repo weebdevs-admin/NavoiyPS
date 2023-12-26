@@ -27,12 +27,12 @@ function Slider() {
       formData.append('file', selectedFile);
 
       // Make a POST request to upload the image
-      await axios.post('http://85.209.2.107:4100/upload', formData, {
+      await axios.post('https://navoiyps.uz/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      const response = await axios.post('http://85.209.2.107:4100/slider/create', { img: selectedFile.name }, {
+      const response = await axios.post('https://navoiyps.uz/slider/create', { img: selectedFile.name }, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -58,7 +58,7 @@ function Slider() {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('http://85.209.2.107:4100/slider');
+      const response = await axios.get('https://navoiyps.uz/slider');
       setImages(response.data);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -68,8 +68,8 @@ function Slider() {
   const handleDelete = async (image) => {
     try {
       // Make a DELETE request to delete the image from the server
-      await axios.delete(`http://85.209.2.107:4100/delete-image/${image.img}`);
-      await axios.delete(`http://85.209.2.107:4100/slider/delete/${image._id}`);
+      await axios.delete(`https://navoiyps.uz/delete-image/${image.img}`);
+      await axios.delete(`https://navoiyps.uz/slider/delete/${image._id}`);
 
 
 
@@ -100,7 +100,7 @@ function Slider() {
         <div className="image-container">
           {images && images.map((e) => (
             <div key={e.index} className="image-card">
-              <img src={`http://85.209.2.107:4100/uploads/${e.img}`} alt={e} />
+              <img src={`https://navoiyps.uz/uploads/${e.img}`} alt={e} />
               <button className='del-btn' onClick={() => handleDelete(e)}>O'chirish</button>
             </div>
           ))}
