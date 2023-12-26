@@ -305,7 +305,7 @@
 
 
 let currentNumber = 0;
-fetch('http://navoiyps.uz/statist')
+fetch('http://localhost:4100/statist')
     .then(response => response.json())
     .then(data => {
         // API-dan olingan ma'lumotlarni ishlab chiqamiz
@@ -395,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-fetch('http://navoiyps.uz/team')
+fetch('http://localhost:4100/team')
     .then(response => response.json())
     .then(data => {
         const teamContainer = document.querySelector('.team-teacher');
@@ -415,7 +415,7 @@ fetch('http://navoiyps.uz/team')
 
                 const teamImage = document.createElement('img');
                 teamImage.classList.add('card-team');
-                teamImage.src = `http://navoiyps.uz/uploads/${teamItem.img}`;
+                teamImage.src = `http://localhost:4100/uploads/${teamItem.img}`;
                 teamImage.alt = '';
 
                 webDesignDiv.appendChild(teamImage);
@@ -426,7 +426,7 @@ fetch('http://navoiyps.uz/team')
     })
     .catch(error => console.error('API bilan xatolik:', error));
 
-fetch('http://navoiyps.uz/team')
+fetch('http://localhost:4100/team')
     .then(response => response.json())
     .then(data => {
         const teamContainer = document.querySelector('.team-div');
@@ -446,7 +446,7 @@ fetch('http://navoiyps.uz/team')
 
                 const teamImage = document.createElement('img');
                 teamImage.classList.add('card-team');
-                teamImage.src = `http://navoiyps.uz/uploads/${teamItem.img}`;
+                teamImage.src = `http://localhost:4100/uploads/${teamItem.img}`;
                 teamImage.alt = '';
 
                 webDesignDiv.appendChild(teamImage);
@@ -457,7 +457,7 @@ fetch('http://navoiyps.uz/team')
     })
     .catch(error => console.error('API bilan xatolik:', error));
 
-fetch('http://navoiyps.uz/team')
+fetch('http://localhost:4100/team')
     .then(response => response.json())
     .then(data => {
         const teamContainer = document.querySelector('.team-exteacher');
@@ -477,7 +477,7 @@ fetch('http://navoiyps.uz/team')
 
                 const teamImage = document.createElement('img');
                 teamImage.classList.add('card-team');
-                teamImage.src = `http://navoiyps.uz/uploads/${teamItem.img}`;
+                teamImage.src = `http://localhost:4100/uploads/${teamItem.img}`;
                 teamImage.alt = '';
 
                 webDesignDiv.appendChild(teamImage);
@@ -488,7 +488,7 @@ fetch('http://navoiyps.uz/team')
     })
     .catch(error => console.error('API bilan xatolik:', error));
 
-fetch('http://navoiyps.uz/team')
+fetch('http://localhost:4100/team')
     .then(response => response.json())
     .then(data => {
         const teamContainer = document.querySelector('.team-sub');
@@ -508,7 +508,7 @@ fetch('http://navoiyps.uz/team')
 
                 const teamImage = document.createElement('img');
                 teamImage.classList.add('card-team');
-                teamImage.src = `http://navoiyps.uz/uploads/${teamItem.img}`;
+                teamImage.src = `http://localhost:4100/uploads/${teamItem.img}`;
                 teamImage.alt = '';
 
                 webDesignDiv.appendChild(teamImage);
@@ -520,7 +520,7 @@ fetch('http://navoiyps.uz/team')
     .catch(error => console.error('API bilan xatolik:', error));
 
 
-fetch('http://navoiyps.uz/abaut')
+fetch('http://localhost:4100/abaut')
     .then(response => response.json())
     .then(data => {
         const abautDataContainer = document.getElementById('abaut-data');
@@ -535,7 +535,7 @@ fetch('http://navoiyps.uz/abaut')
 
             const mainImage = document.createElement('img');
             mainImage.classList.add('abaut-main-img');
-            mainImage.src = `http://navoiyps.uz/uploads/${abautItem.img}`;
+            mainImage.src = `http://localhost:4100/uploads/${abautItem.img}`;
             mainImage.alt = '';
 
             imageDiv.appendChild(mainImage);
@@ -564,7 +564,7 @@ fetch('http://navoiyps.uz/abaut')
     })
     .catch(error => console.error('API bilan xatolik:', error));
 
-fetch('http://navoiyps.uz/slider')
+fetch('http://localhost:4100/slider')
     .then(response => response.json())
     .then(data => {
         const swiperContainer = document.querySelector('#swipper');
@@ -573,7 +573,7 @@ fetch('http://navoiyps.uz/slider')
         data.forEach(sliderItem => {
             const swiperSlide = document.createElement('div');
             swiperSlide.classList.add('swiper-slide', 'cover-background');
-            swiperSlide.style.backgroundImage = `url(http://navoiyps.uz/uploads/${sliderItem.img})`;
+            swiperSlide.style.backgroundImage = `url(http://localhost:4100/uploads/${sliderItem.img})`;
 
             swiperContainer.appendChild(swiperSlide);
         });
@@ -591,7 +591,7 @@ fetch('http://navoiyps.uz/slider')
     .catch(error => console.error('API bilan xatolik:', error));
 
 
-fetch('http://navoiyps.uz/gallery')
+fetch('http://localhost:4100/gallery')
     .then(response => response.json())
     .then(data => {
         const photosContainer = document.getElementById('photos');
@@ -602,7 +602,7 @@ fetch('http://navoiyps.uz/gallery')
             listItem.classList.add('foto-main');
 
             const image = document.createElement('img');
-            image.src = `http://navoiyps.uz/uploads/${photoItem.img}`;
+            image.src = `http://localhost:4100/uploads/${photoItem.img}`;
             image.alt = '';
 
             listItem.appendChild(image);
@@ -623,7 +623,7 @@ fetch('http://navoiyps.uz/gallery')
         });
     
         // API dan malumotlarni olish
-        fetch('http://navoiyps.uz/contact/create', {
+        fetch('http://localhost:4100/contact/create', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ function ContactForm() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://navoiyps.uz/contact');
+        const response = await axios.get('http://localhost:4100/contact');
         setContactFormData(response.data.reverse());
       } catch (error) {
         console.error('Malumotlarni olishda xatolik yuzaga keldi', error);
