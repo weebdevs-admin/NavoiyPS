@@ -23,6 +23,11 @@ app.listen(port, () => {
 });
 
 
+const path = require('path');
+
+
+
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'uploads/');
@@ -141,4 +146,21 @@ app.use(function (err, req, res, next) {
   console.error(err.message);
   if (!err.statusCode) err.statusCode = 500;
   res.status(err.statusCode).send(err.message);
+});
+
+// Define a route for the root ("/") path
+app.get('/', (req, res) => {
+  // Use path module to get the absolute path to the HTML file
+  const filePath = path.join(__dirname, '../client', 'index.html');
+
+  // Send the HTML file
+  res.sendFile(filePath);
+});
+
+// Boshqa static fayllarni servis qilish
+app.use(express.static(path.join(__dirname, '../client')));
+
+// Barcha yo'l yo'nalishlar uchun index.html faylni qaytarish
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
