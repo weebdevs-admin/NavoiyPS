@@ -8,7 +8,7 @@ function Login() {
   const login = useRef()
   const pasword = useRef()
   useEffect(() => {
-    fetch('http://navoiyps.uz/login')
+    fetch('http://85.209.2.107:4100/login')
       .then(res => res.json())
       .then(ResData => {
         ResData && ResData.map((element) => {

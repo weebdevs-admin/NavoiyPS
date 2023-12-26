@@ -27,12 +27,12 @@ function Photos() {
       formData.append('file', selectedFile);
 
       // Make a POST request to upload the image
-      await axios.post('http://navoiyps.uz/upload', formData, {
+      await axios.post('http://85.209.2.107:4100/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      const response = await axios.post('http://navoiyps.uz/gallery/create', { img: selectedFile.name }, {
+      const response = await axios.post('http://85.209.2.107:4100/gallery/create', { img: selectedFile.name }, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -58,7 +58,7 @@ function Photos() {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('http://navoiyps.uz/gallery');
+      const response = await axios.get('http://85.209.2.107:4100/gallery');
       setImages(response.data);
     } catch (error) {
       console.error('Error fetching images:', error);
@@ -69,8 +69,8 @@ function Photos() {
     console.log(image);
     try {
       // Make a DELETE request to delete the image from the server
-      await axios.delete(`http://navoiyps.uz/delete-image/${image.img}`);
-      await axios.delete(`http://navoiyps.uz/gallery/delete/${image._id}`);
+      await axios.delete(`http://85.209.2.107:4100/delete-image/${image.img}`);
+      await axios.delete(`http://85.209.2.107:4100/gallery/delete/${image._id}`);
 
 
 
@@ -101,7 +101,7 @@ function Photos() {
         <div className="image-container">
           {images && images.map((e) => (
             <div key={e.index} className="image-card">
-              <img src={`http://navoiyps.uz/uploads/${e.img}`} alt={e} />
+              <img src={`http://85.209.2.107:4100/uploads/${e.img}`} alt={e} />
               <button className='del-btn' onClick={() => handleDelete(e)}>O'chirish</button>
             </div>
           ))}
