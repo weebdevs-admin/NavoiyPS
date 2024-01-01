@@ -33,9 +33,8 @@ function Team() {
 
   const handleDelete = async (teamItem) => {
     try {
-      await axios.delete(`https://navoiyps.uz/delete-image/${teamItem.img}`);
       await axios.delete(`https://navoiyps.uz/team/delete/${teamItem._id}`);
-      toast.success('Image deleted successfully');
+      toast.success('deleted successfully');
       fetchImages();
     } catch (error) {
       console.error('Error deleting image:', error);

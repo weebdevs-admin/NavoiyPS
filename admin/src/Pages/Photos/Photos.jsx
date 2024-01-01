@@ -69,13 +69,12 @@ function Photos() {
     console.log(image);
     try {
       // Make a DELETE request to delete the image from the server
-      await axios.delete(`https://navoiyps.uz/delete-image/${image.img}`);
       await axios.delete(`https://navoiyps.uz/gallery/delete/${image._id}`);
 
 
 
       // Display success message
-      toast.success('Image deleted successfully');
+      toast.success('deleted successfully');
 
       // Fetch the updated list of images
       fetchImages();

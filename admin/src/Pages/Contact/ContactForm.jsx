@@ -26,24 +26,29 @@ function ContactForm() {
     fetchData();
   }, []);
 
+  const formatDate = (dateString) => {
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+    return new Date(dateString).toLocaleDateString('en-US', options);
+  };
+
   return (
     <>
       <ToastContainer />
       {navbar ? <Sidebar /> : null}
       <Navbar />
       <div className='main'>
-      <h2 className="title">Taklif va Izoxlar</h2>
-      <ul className="contact-form-list">
-        {contactFormData.map((data) => (
-          <li key={data._id}>
-            <h4>Ismi: {data.firstname}</h4>
-            <p>Email: {data.email}</p>
-            <p>Mavzu: {data.title}</p>
-            <p>Xabari: {data.message}</p>
-          </li>
-          
-        ))}
-      </ul>
+        <h2 className="title">Taklif va Izoxlar</h2>
+        <ul className="contact-form-list">
+          {contactFormData.map((data) => (
+            <li key={data._id}>
+              <h4>Ismi: {data.firstname}</h4>
+              <p>Telefon Raqami: {data.phone}</p>
+              <p>Mavzu: {data.title}</p>
+              <p>Xabari: {data.message}</p>
+              <p>Sanasi: {formatDate(data.createdAt)}</p>
+            </li>
+          ))}
+        </ul>
       </div>
     </>
   );

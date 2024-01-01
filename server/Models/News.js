@@ -10,7 +10,10 @@ let News = new Schema({
   },
   desc: {
     type: String,
-  }
+  },
+  iframe: {
+    type: String,
+  },
 
 });
 

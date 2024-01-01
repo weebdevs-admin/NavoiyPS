@@ -6,11 +6,6 @@ const cors = require("cors");
 const multer = require('multer');
 const fs = require('fs')
 const port = process.env.PORT
-
-
-
-
-
 app.use(cors());
 
 
@@ -122,7 +117,6 @@ app.get('/image-names', (req, res) => {
 });
 
 
-
 const StatistRoute = require('./Routes/Statist.route')
 const TeamRoute = require('./Routes/Team.route')
 const AbautRoute = require('./Routes/Abaut.route')
@@ -131,6 +125,8 @@ const GalleryRoute = require('./Routes/Gallery.route')
 const ContactRoute = require('./Routes/Contact.route')
 const SliderRoute = require('./Routes/Slider.route');
 const LoginRoute = require('./Routes/Login.route');
+const PartnersRoute = require('./Routes/Partners.route');
+const IframesRoute = require('./Routes/Iframes.route');
 
 app.use('/statist', StatistRoute)
 app.use('/team', TeamRoute)
@@ -140,6 +136,9 @@ app.use('/contact', ContactRoute)
 app.use('/slider', SliderRoute)
 app.use('/gallery', GalleryRoute)
 app.use('/login', LoginRoute)
+app.use('/partners', PartnersRoute)
+app.use('/iframes', IframesRoute)
+
 
 
 app.use(function (err, req, res, next) {
@@ -164,3 +163,4 @@ app.use(express.static(path.join(__dirname, '../client')));
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
+

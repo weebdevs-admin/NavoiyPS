@@ -651,3 +651,31 @@ fetch('https://navoiyps.uz/gallery')
 // Foydalanuvchi kiritgan malumotlarni olish
 
 
+
+fetch('https://navoiyps.uz/news')
+    .then(response => response.json())
+    .then(data => {
+        const newsContainer = document.getElementById('blog-art');
+
+        // Clear the existing content in case you want to make multiple requests
+        newsContainer.innerHTML = '';
+
+        // Loop through the data and create HTML elements dynamically
+        data.forEach(item => {
+            const listItem = document.createElement('div');
+            listItem.className = 'articles1';
+            listItem.style.height = '300px';
+
+            listItem.innerHTML = `
+                <div class="blog-img">
+                    <a href="#" class="small-card" data-src="https://navoiyps.uz/uploads/${item.img}"><img src="https://navoiyps.uz/uploads/${item.img}" alt=""></a>
+                </div>
+                <div class="blog-text">
+                    <h6><b><a href="#">${item.title}</a></b></h6>
+                </div>
+            `;
+            // Append the dynamically created element to the container
+            newsContainer.appendChild(listItem);
+        });
+    })
+    .catch(error => console.error('API bilan xatolik:', error));

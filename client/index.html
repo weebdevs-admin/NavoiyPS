@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>The Presidental School Of The Republic Of Uzbekistan</title>
+    <title>Navoiy shahar Prezident maktabi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -438,19 +438,7 @@
         <div class="container">
             <h2 class="container" style="margin-left: 0px;  margin-bottom: 30px;">Maktab hayotidan lavhalar</h2>
         </div>
-        <ul  style="display: flex;  justify-content: center; list-style: none; gap: 10px; padding-left: 20px; ">
-            <li class="gallery-main" style="height: 500px; width: 300px; ">
-                <img src="./images/1.jpg" style="width: 100%; margin-bottom: 10px; height: 65%; object-fit: cover;" alt="">
-                <img src="./images/2.jpg" style="width: 100%; height: 30%; object-fit: cover;" alt="">
-            </li>
-            <li class="gallery-main" style="height: 500px; width: 500px; ">
-                <img src="./images/3.jpg" style="width: 100%; margin-bottom: 10px; height: 47%; object-fit: cover;" alt="">
-                <img src="./images/4.jpg" style="width: 100%; height: 48%; object-fit: cover;" alt="">
-            </li>
-            <li class="gallery-main" style="height: 500px; width: 300px; ">
-                <img src="./images/5.jpg" style="width: 100%; margin-bottom: 10px; height: 98%; object-fit: cover;" alt="">
-               
-            </li>
+        <ul id="lg-main-gallery" class="lg-main-gallery" style="display: flex;  justify-content: center; list-style: none; gap: 10px; padding-left: 20px; ">
             
             
         </ul>
@@ -476,8 +464,8 @@
         </ul>
     </div>
 
-    <div style="display: flex; justify-content: center;" class="container">
-        <iframe style="margin-top: 30px; margin-bottom: 30px;" width="100%" height="400" src="https://www.youtube.com/embed/a9zUOcUmKUo?si=jNVBXcqIvfRKpf7y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div  id="iframe-container" style="display: flex; justify-content: center;" class="container">
+        
     </div>
     
     <div class="joinus">
@@ -584,13 +572,9 @@
             </div>
         </div>
     </div> -->
-    <h2 class="container" style="color: rgb(40, 35, 51); text-align: center; margin-top: 30px;">Hamkor tashkilotlar</h2>
-    <div class="container" style=" width: 100%; gap: 10px; overflow: auto; display: flex; padding: 20px; ">
-        <img style="border-radius: 10px;" src="images/res1.jpg" width="300px" height="130px" alt="Logo 1" class="partner-logo">
-        <img style="border-radius: 10px;" src="images/res2.jpg" width="300px" height="130px" alt="Logo 2" class="partner-logo">
-        <img style="border-radius: 10px;" src="images/res4.jpg" width="300px" height="130px" alt="Logo 4" class="partner-logo">
-        <img style="border-radius: 10px;" src="images/res3.jpg" width="300px" height="130px" alt="Logo 3" class="partner-logo">
-        <!-- Boshqa logolar ham shu yerda qo'shing -->
+    <h2 class="container" style="color: rgb(4   0, 35, 51); text-align: center; margin-top: 30px;">Hamkor tashkilotlar</h2>
+    <div id="partners-container" class="container" style=" width: 100%; gap: 10px; overflow: auto; display: flex; padding: 20px; ">
+       
     </div>
     <div class=" " style="margin-top: 10px;">
         <div class="container"> 
@@ -739,7 +723,7 @@
                                     <img src="images/map.png" alt=""> <br>
                                     <span>Navoiy shahar, I. Karimov, 91</span>
                                 </li>
-                                <li><img src="images/call.png" alt=""><span>+998792220102</span></li>
+                                <li><img src="images/call.png" alt=""><span>+998992234244</span></li>
                                 <li><img src="images/mail.png" alt=""><span> info@navoiyps.uz</span></li>
 
                             </ul>
@@ -789,7 +773,85 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./js/main.js"></script>
-   
+   <script>
+     document.addEventListener('DOMContentLoaded', function () {
+      const partnersContainer = document.getElementById('partners-container');
+
+      // API dan ma'lumotlarni olish
+      fetch('https://navoiyps.uz/partners')
+        .then(response => response.json())
+        .then(data => {
+          // Ma'lumotlarni HTML-ga chiqarish
+          const html = data.map(partner => `
+            <img
+              key="${partner._id}"
+              style="border-radius: 10px;"
+              src="https://navoiyps.uz/uploads/${partner.img}"
+              width="300px"
+              height="130px"
+              alt="Logo ${partner._id}"
+              class="partner-logo"
+            />
+          `).join(''); 
+
+          // HTML-ni containerga joylash
+          partnersContainer.innerHTML = html;
+        })
+        .catch(error => console.error('Error fetching partners:', error));
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      const iframeContainer = document.getElementById('iframe-container');
+
+      // API dan ma'lumotlarni olish
+      fetch('https://navoiyps.uz/iframes')
+        .then(response => response.json())
+        .then(data => {
+          // Ma'lumotlarni HTML-ga chiqarish
+          const iframeHtml = data.map(iframe => `
+            <iframe
+              key="${iframe._id}"
+              style="margin-top: 30px; margin-bottom: 30px;"
+              width="100%"
+              height="400"
+              src="${iframe.src}"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          `).join('');
+
+          // HTML-ni containerga joylash
+          iframeContainer.innerHTML = iframeHtml;
+        })
+        .catch(error => console.error('Error fetching iframes:', error));
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const iframeContainer = document.getElementById('lg-main-gallery');
+
+      // API dan ma'lumotlarni olish
+      fetch('https://navoiyps.uz/gallery')
+        .then(response => response.json())
+        .then(data => {
+          iframeContainer.innerHTML = `
+          <li class="gallery-main" style="height: 500px; width: 300px; ">
+                <img src="https://navoiyps.uz/uploads/${data[0].img}" style="width: 100%; margin-bottom: 10px; height: 65%; object-fit: cover;" alt="">
+                <img src="https://navoiyps.uz/uploads/${data[1].img}" style="width: 100%; height: 30%; object-fit: cover;" alt="">
+            </li>
+            <li class="gallery-main" style="height: 500px; width: 500px; ">
+                <img src="https://navoiyps.uz/uploads/${data[2].img}" style="width: 100%; margin-bottom: 10px; height: 47%; object-fit: cover;" alt="">
+                <img src="https://navoiyps.uz/uploads/${data[3].img}" style="width: 100%; height: 48%; object-fit: cover;" alt="">
+            </li>
+            <li class="gallery-main" style="height: 500px; width: 300px; ">
+                <img src="https://navoiyps.uz/uploads/${data[4].img}" style="width: 100%; margin-bottom: 10px; height: 98%; object-fit: cover;" alt="">
+               
+            </li>
+          `;
+        })
+        .catch(error => console.error('Error fetching iframes:', error));
+    });
+   </script>
 
 </body>
 </html>

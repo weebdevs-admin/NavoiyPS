@@ -14,6 +14,7 @@ function Abaut() {
     img: '...',
     title: '...',
     desc: '...',
+    iframe: '...'
   });
   useEffect(() => {
     axios.get('https://navoiyps.uz/abaut')
@@ -24,6 +25,7 @@ function Abaut() {
             img: initialData.img,
             title: initialData.title,
             desc: initialData.desc,
+            iframe: initialData.iframe,
           });
         }
       })
@@ -37,7 +39,7 @@ function Abaut() {
     if ( formData.title !== '...' || formData.desc !== '...') {
       try {
         const response = await axios.put(
-          'https://navoiyps.uz/abaut/update/658adc8865e4331de7f6a824',
+          'https://navoiyps.uz/abaut/update/658f27f9bc94be5b098819f6',
           formData
         );
 
@@ -106,6 +108,16 @@ function Abaut() {
         <form onSubmit={handleSubmit} className='main-form'>
           <label>
             <input type="file" onChange={handleFileChange} />
+          </label>
+          <label>
+          <input
+              type='text'
+              name="iframe"
+              value={formData.iframe}
+              onChange={handleInputChange}
+              placeholder="Video link"
+            />
+
           </label>
           <label>
             <input

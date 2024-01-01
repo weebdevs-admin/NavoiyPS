@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './Slider.scss';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import Navbar from '../../Components/Navbar/Navbar';
 import { Context } from '../../Context/Context';
@@ -7,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toast, ToastContainer } from 'react-toastify';
 import axios from 'axios';
 
-function Slider() {
+function Partners() {
   const { navbar, setNavbar } = useContext(Context);
   const [selectedFile, setSelectedFile] = useState(null);
   const [images, setImages] = useState(null);
@@ -32,14 +31,14 @@ function Slider() {
           'Content-Type': 'multipart/form-data',
         },
       });
-      const response = await axios.post('https://navoiyps.uz/slider/create', { img: selectedFile.name }, {
+      const response = await axios.post('https://navoiyps.uz/partners/create', { img: selectedFile.name }, {
         headers: {
           'Content-Type': 'application/json',
         },
       });
 
       if (response.data) {
-        toast.success('Slider joylandi');
+        toast.success(' joylandi');
       } else {
         toast.error('Xatolik yuz berdi!');
       }
@@ -47,7 +46,7 @@ function Slider() {
 
       // Display success message
     } catch (error) {
-      console.error('Error uploading image:', error);
+      console.error('Error uploading image:', error);    
       toast.error('Error uploading image');
     }
   };
@@ -58,17 +57,17 @@ function Slider() {
 
   const fetchImages = async () => {
     try {
-      const response = await axios.get('https://navoiyps.uz/slider');
+      const response = await axios.get('https://navoiyps.uz/partners');
       setImages(response.data);
     } catch (error) {
       console.error('Error fetching images:', error);
     }
   };
-
+ 
   const handleDelete = async (image) => {
     try {
       // Make a DELETE request to delete the image from the server
-      await axios.delete(`https://navoiyps.uz/slider/delete/${image._id}`);
+      await axios.delete(`https://navoiyps.uz/partners/delete/${image._id}`);
 
 
 
@@ -89,7 +88,7 @@ function Slider() {
       {navbar ? <Sidebar /> : null}
       <Navbar />
       <div className='main'>
-        <h2>Slider O'rnatish</h2>
+        <h2>Xamkor Qo'shish</h2>
         <div className='main-form'>
           <label>
             <input type="file" onChange={handleFileChange} />
@@ -109,4 +108,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default Partners;

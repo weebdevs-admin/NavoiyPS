@@ -10,6 +10,9 @@ let Abaut = new Schema({
   },
   desc: {
     type: String,
+  },
+  iframe:{
+    type: String
   }
 
 });

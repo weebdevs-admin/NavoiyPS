@@ -9,7 +9,9 @@ import Error from './Pages/Error/Error'
 import News from './Pages/News/News'
 import Photos from './Pages/Photos/Photos'
 import Slider from './Pages/Slider/Slider'
+import Iframe from './Pages/Iframe/Iframe'
 import Team from './Pages/Team/Team'
+import Partners from './Pages/Partners/Partners'
 import { Provider } from './Context/Context';
 import { useEffect } from 'react';
 import {useLocation,useNavigate} from 'react-router-dom'
@@ -40,6 +42,8 @@ function App() {
         <Route path='/photos' element={<Photos />} />
         <Route path='/slider' element={<Slider />} />
         <Route path='/team' element={<Team />} />
+        <Route path='/partners' element={<Partners />} />
+        <Route path='/iframe' element={<Iframe />} />
         <Route path='/*' element={<Error />} />
       </Routes>
     </Provider>

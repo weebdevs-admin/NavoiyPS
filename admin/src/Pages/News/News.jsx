@@ -13,7 +13,9 @@ function News() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [images, setImages] = useState(null);
   const [formData, setFormData] = useState({
+    option: 'rasm',
     img: '',
+    iframe: '',
     title: '',
     desc: '',
   });
@@ -35,9 +37,8 @@ function News() {
 
   const handleDelete = async (newsItem) => {
     try {
-      await axios.delete(`https://navoiyps.uz/delete-image/${newsItem.img}`);
       await axios.delete(`https://navoiyps.uz/news/delete/${newsItem._id}`);
-      toast.success('Image deleted successfully');
+      toast.success('deleted successfully');
       fetchImages();
     } catch (error) {
       console.error('Error deleting image:', error);
@@ -48,19 +49,42 @@ function News() {
   const handleEdit = (newsItem) => {
     setEditingItemId(newsItem._id);
     setFormData({
+      option: 'rasm', // Sizning option turingizga qarab, agar tanlangan option 'rasm' bo'lsa, sizga rasmni tanlash uchun input chiqadi; aks holda, 'video' bo'lsa, video linkni kiritish uchun text input.
       img: newsItem.img,
+      iframe: newsItem.iframe || '', // Video linki bor yoki yo'qligini tekshirish
       title: newsItem.title,
       desc: newsItem.desc,
     });
   };
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
+  // ... (yukoridagi kodlar)
+
+const handleInputChange = (e) => {
+  const { name, value } = e.target;
+
+  // Agar o'zgaruvchini nomi "option" bo'lsa va qiymati "video" bo'lsa, "img"ni bo'sh qo'yamiz
+  if (name === 'option' && value === 'video') {
+    setFormData({
+      ...formData,
+      [name]: value,
+      img: '', // Rasmni bo'sh qilish
+    });
+  } else if (name === 'option' && value === 'rasm') {
+    setFormData({
+      ...formData,
+      [name]: value,
+      iframe: '', // Video linkni bo'sh qilish
+    });
+  } else {
     setFormData({
       ...formData,
       [name]: value,
     });
-  };
+  }
+};
+
+// ... (qolgan kodlar)
+
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
@@ -106,7 +130,7 @@ function News() {
         }
 
         setEditingItemId(null);
-        setFormData({ img: '', title: '', desc: '' });
+        setFormData({ option: 'rasm', img: '', iframe: '', title: '', desc: '' });
         setSelectedFile(null);
         fetchImages();
       } catch (error) {
@@ -127,8 +151,30 @@ function News() {
         <h2>Yangiliklar</h2>
         <form onSubmit={handleSubmit} className='main-form'>
           <label>
-            <input type="file" onChange={handleFileChange} />
+            <select name="option" onChange={handleInputChange} value={formData.option || ''}>
+              <option value="rasm">Rasm</option>
+              <option value="video">Video</option>
+            </select>
           </label>
+
+          {formData.option === 'rasm' && (
+            <label>
+              <input type="file" onChange={handleFileChange} />
+            </label>
+          )}
+
+          {formData.option === 'video' && (
+            <label>
+              <input
+                type='text'
+                name="iframe"
+                value={formData.iframe}
+                onChange={handleInputChange}
+                placeholder="Video havolasi"
+              />
+            </label>
+          )}
+
           <label>
             <input
               type='text'
@@ -138,6 +184,7 @@ function News() {
               placeholder="Sarlavha"
             />
           </label>
+
           <label>
             <textarea
               name="desc"
@@ -146,6 +193,7 @@ function News() {
               placeholder="To'liq ma'lumot"
             />
           </label>
+
           <button type="submit" onClick={handleUpload}>
             Yangilash
           </button>
@@ -154,7 +202,8 @@ function News() {
           {images &&
             images.map((newsItem) => (
               <div key={newsItem._id} className="news-card">
-                <img src={`https://navoiyps.uz/uploads/${newsItem.img}`} alt={newsItem.title} />
+                {newsItem.img && <img src={`https://navoiyps.uz/uploads/${newsItem.img}`} alt={newsItem.title} />}
+                {newsItem.iframe && <iframe width="100%" height="auto" src={newsItem.iframe} title={newsItem.title}></iframe>}
                 <div className="news-content">
                   <h3>{newsItem.title}</h3>
                 </div>
