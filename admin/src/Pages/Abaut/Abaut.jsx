@@ -39,7 +39,7 @@ function Abaut() {
     if ( formData.title !== '...' || formData.desc !== '...') {
       try {
         const response = await axios.put(
-          'https://navoiyps.uz/abaut/update/658f27f9bc94be5b098819f6',
+          'https://navoiyps.uz/abaut/update/6593e17539d4ca8f2540ed63',
           formData
         );
 

@@ -96,7 +96,6 @@ const handleInputChange = (e) => {
 
   const handleUpload = async () => {
     if (!selectedFile) {
-      toast.error('Iltimos rasm tanlang!');
       return;
     }
 

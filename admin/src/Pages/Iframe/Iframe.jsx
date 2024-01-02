@@ -36,7 +36,7 @@ function Iframe() {
     if (formData.src !== '...') {
       try {
         const response = await axios.put(
-          'https://navoiyps.uz/iframes/update/658f2afabc94be5b09881a06',
+          'https://navoiyps.uz/iframes/update/6593e07339d4ca8f2540ed22',
           formData
         );
 

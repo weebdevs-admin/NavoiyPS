@@ -142,8 +142,7 @@
         </div>
     </div>
 
-    <div style="display: flex; justify-content: center;" class="container">
-        <iframe style="margin-top: 10px; margin-bottom: 30px;" width="100%" height="400" src="https://www.youtube.com/embed/a9zUOcUmKUo?si=jNVBXcqIvfRKpf7y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div style="display: flex; justify-content: center; margin-bottom: 50px;" class="container iframe-abaut" id="iframeContainer">
     </div>
 
 
@@ -250,6 +249,31 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        // JavaScript orqali API dan ma'lumotlarni olish
+        fetch('https://navoiyps.uz/abaut')
+          .then(response => response.json())
+          .then(data => {
+            const aboutData = data[0];
+      
+            // Dinamik iframe yaratish
+            const iframeContainer = document.getElementById('iframeContainer');
+            const iframeElement = document.createElement('iframe');
+            iframeElement.src = aboutData.iframe;
+            iframeElement.width = '100%';
+            iframeElement.height = '400';
+            iframeElement.title = 'YouTube video player';
+            iframeElement.frameBorder = '0';
+            iframeElement.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+            iframeElement.allowFullscreen = true;
+      
+            // Dinamik iframe ni HTML-ga qo'shish
+            iframeContainer.appendChild(iframeElement);
+          })
+          .catch(error => {
+            console.error('API dan malumot olishda xatolik:', error);
+          });
+      </script>
 
 </body>
 </html>
