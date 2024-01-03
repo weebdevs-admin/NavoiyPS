@@ -446,19 +446,8 @@
 
     <div class="md-gallery " >
         <h2 style="margin-left: 20px;  margin-bottom: 30px;">Maktab hayotidan lavhalar</h2>
-        <ul  style="display: flex;  flex-direction: column; list-style: none;  padding-left: 20px; ">
-            <li class="gallery-main" style="height: 500px; width: 95%; ">
-                <img src="./images/1.jpg" style="width: 100%; margin-bottom: 10px; height: 65%; object-fit: cover;" alt="">
-                <img src="./images/2.jpg" style="width: 100%; height: 30%; object-fit: cover;" alt="">
-            </li>
-            <li class="gallery-main" style="height: 500px; width: 95%; ">
-                <img src="./images/3.jpg" style="width: 100%; margin-bottom: 10px; height: 47%; object-fit: cover;" alt="">
-                <img src="./images/4.jpg" style="width: 100%; height: 48%; object-fit: cover;" alt="">
-            </li>
-            <li class="gallery-main" style="height: 500px; width: 95%; ">
-                <img src="./images/5.jpg" style="width: 100%; margin-bottom: 10px; height: 98%; object-fit: cover;" alt="">
-               
-            </li>
+        <ul id="md-main-gallery" style="display: flex;  flex-direction: column; list-style: none;  padding-left: 20px; ">
+            
             
             
         </ul>
@@ -850,6 +839,37 @@
           `;
         })
         .catch(error => console.error('Error fetching iframes:', error));
+
+
+        
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const iframeContainer = document.getElementById('md-main-gallery');
+
+      // API dan ma'lumotlarni olish
+      fetch('https://navoiyps.uz/gallery')
+        .then(response => response.json())
+        .then(data => {
+          iframeContainer.innerHTML = `
+          <li class="gallery-main" style="height: 500px; width: 95%; ">
+                <img src="https://navoiyps.uz/uploads/${data[0].img}" style="width: 100%; margin-bottom: 10px; height: 65%; object-fit: cover;" alt="">
+                <img src="https://navoiyps.uz/uploads/${data[1].img}" style="width: 100%; height: 30%; object-fit: cover;" alt="">
+            </li>
+            <li class="gallery-main" style="height: 500px; width: 95%; ">
+                <img src="https://navoiyps.uz/uploads/${data[2].img}" style="width: 100%; margin-bottom: 10px; height: 47%; object-fit: cover;" alt="">
+                <img src="https://navoiyps.uz/uploads/${data[3].img}" style="width: 100%; height: 48%; object-fit: cover;" alt="">
+            </li>
+            <li class="gallery-main" style="height: 500px; width: 95%; ">
+                <img src="https://navoiyps.uz/uploads/${data[4].img}" style="width: 100%; margin-bottom: 10px; height: 98%; object-fit: cover;" alt="">
+               
+            </li>
+          `;
+        })
+        .catch(error => console.error('Error fetching iframes:', error));
+
+
+        
     });
    </script>
 
